@@ -1,0 +1,29 @@
+<h1>Gerenciador de Conteúdo</h1>
+
+<div class="w-100 d-flex justify-content-end">
+  <a a class="btn btn-primary" href="http://localhost/MVC-PHP/?page=admin&method=create">Criar publicação</a>
+</div>
+
+<hr>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Título</th>
+        <th scope="col">Alteração</th>
+        <th scope="col">Deleção</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in posts %}
+        <tr>
+          <!-- <th scope="row">1</th> -->
+          <td>{{post.id}}</td>
+          <td>{{post.titulo}}</td>
+          <td class="col-2"><a class="btn btn-success" href="http://localhost/MVC-PHP/?page=admin&method=change&id={{post.id}}">Alterar</a></td>
+          <td class="col-2"><a class="btn btn-danger" href="http://localhost/MVC-PHP/?page=admin&method=delete&id={{post.id}}">Deletar</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+

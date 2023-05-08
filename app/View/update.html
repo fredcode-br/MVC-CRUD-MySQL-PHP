@@ -1,0 +1,18 @@
+<h1>Alterar publicação</h1>
+
+<form method="POST" action="?page=admin&method=update">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input type="text" class="form-control" id="title" name="title" 
+      placeholder="Digite o título da postagem" value="{{titulo}}">
+    </div>
+    <div class="form-group">
+        <label for="content">Conteúdo</label>
+        <textarea id="content"  class="form-control" name="content" rows="10" cols="50" 
+        placeholder="Digite o conteúdo da postagem">{{conteudo}}</textarea>
+    </div>  
+    
+    <input type="hidden" name="id" value="{{id}}"> 
+
+    <button type="submit" class="btn btn-primary my-3">Alterar</button>
+  </form>

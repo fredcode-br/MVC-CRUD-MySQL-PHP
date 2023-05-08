@@ -1,17 +1,13 @@
     <section id="posts">
         <div class="post-content">
             <h1 class="text-danger">Postagens:</h1>
+            {% for post in posts %}
             <article class="py-2">
                 <header>
-                    <h2><a class="text-decoration-none text-dark" href="#">Título</a></h2>
-                    <p>Conteúdo da postagem que to fazendo</p>
+                    <h2><a class="text-decoration-none text-dark" href={{directory}}{{post.id}}>{{post.titulo}}</a></h2>
                 </header>
+                <p>{{post.conteudo}}</p>
             </article>
-            <article class="py-2">
-                <header>
-                    <h2><a class="text-decoration-none text-dark" text-decoration-none text-dark href="#">Título</a></h2>
-                    <p>Conteúdo da postagem que to fazendo</p>
-                </header>
-            </article>
+            {% endfor %}
         </div>
     </section>

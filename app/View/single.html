@@ -1,0 +1,37 @@
+<section id="">
+        <article class="py-2">
+            <header>
+                <h2>{{titulo}}</h2>
+            </header>
+            <p>{{conteudo}}</p>
+        </article>
+
+        <h4>Comentar</h4>
+        <form method="POST" action="?page=post&method=addComment">
+            <div class="form-group">
+            <label for="title">Nome</label>
+            <input type="text" class="form-control" name="name" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea class="form-control" name="message" rows="5" cols="30" placeholder="Digite seu comentário"></textarea>
+            </div>  
+            <input type="hidden" name="id" value="{{id}}">  
+            <button type="submit" class="btn btn-primary my-3">Enviar comentário</button>
+        </form>
+
+        <hr>
+        
+        {% if comentarios == false %}
+            <p class="py-2">Nenhum comentário encontrado para esta postagem.</p>
+        {% else %}
+            {% for comment in comentarios %}
+                <div class="py-1">
+                    <header>
+                        <h4>{{comment.nome}}</h4>
+                    </header>
+                    <p>{{comment.mensagem}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+</section>

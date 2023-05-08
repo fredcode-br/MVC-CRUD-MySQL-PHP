@@ -14,12 +14,18 @@
 
 </head>
 <body class="bg-info">
+    <style>
+        a:hover {
+        text-decoration:underline !important;
+    }
+    </style>
     <header >
-        <nav> 
-            <ul class="container d-flex list-unstyled gap-2 bg-white p-4"> 
-                <li><a class="text-decoration-none text-dark" href="#">Home</a></li>
-                <li><a class="text-decoration-none text-dark" href="#">Sobre</a></li>
+        <nav class="container d-flex align-items-center justify-content-between bg-white p-4 mb-1"> 
+            <ul class="d-flex list-unstyled gap-4 mb-0"> 
+                <li><a class="text-decoration-none text-dark" href="http://localhost/MVC-PHP/">Home</a></li>
+                <li><a class="text-decoration-none text-dark" href="http://localhost/MVC-PHP/?page=about">Sobre</a></li>
             </ul>
+            <a class="text-decoration-none text-dark"  href="http://localhost/MVC-PHP/?page=admin&method=index">Admin</a>
         </nav>
     </header>
     <div class="container bg-white">
