@@ -4,6 +4,7 @@
 
 ## Comments
 
+MCV system developed following courses, with the intention of applying them in future projects.
 
 ## Technologies Used:
 
@@ -13,9 +14,6 @@
     <td>MySQL</td>
   </tr>
 </table>
-
-## How to use this project:
-
 
 ## Project image
 ![project](https://user-images.githubusercontent.com/123844821/236909615-498921ef-2916-41dd-95e0-772a6229ae64.png)
